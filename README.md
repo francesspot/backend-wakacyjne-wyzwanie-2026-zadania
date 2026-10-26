@@ -1,32 +1,28 @@
-**Polski** | [English](README.en.md)
+🇵🇱 **Polski** | 🇬🇧 [English](README.en.md)
 
-# Zadania ze ścieżki Backend — Wakacyjne Wyzwanie 2026
+# ⚙️ Backend w NestJS — Wakacyjne Wyzwanie 2026
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7c32ec09-c2ac-4961-82e6-a98f04220510"/>
-</p>
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 
-To repozytorium jest miejscem, w którym wykonujemy zadania z kursu backendowego Wakacyjnego Wyzwania koła naukowego **Solvro**. Materiały kursu znajdują się w repozytorium [backend-wakacyjne-wyzwanie-2026](https://github.com/Solvro/backend-wakacyjne-wyzwanie-2026).
+> 🎓 Ścieżka backendowa **Wakacyjnego Wyzwania 2026** koła naukowego **KN Solvro** (Politechnika Wrocławska)
 
-## Moje rozwiązania
+W wakacje krok po kroku zbudowałem REST API do **planowania wycieczek i rozliczania wydatków** ✈️💰 — od pierwszego endpointu po logowanie z JWT. Każde zadanie jest na osobnej gałęzi.
 
-Każde zadanie jest na osobnej gałęzi; gałąź `main` zawiera tylko ten opis.
+## 🪜 Etapy
 
-| Gałąź | Zadanie | Co zostało zrobione |
-|-------|---------|---------------------|
-| [`franciszek-pora-0`](../../tree/franciszek-pora-0) | 0 — rozgrzewka w TypeScripcie | Skrypt Node.js zapisujący do pliku „Elo żelo" tyle razy, ile wynosi bieżąca minuta |
-| [`franciszek-pora-1`](../../tree/franciszek-pora-1) | 1 — pierwsza aplikacja w NestJS | Utworzenie projektu, przykładowy endpoint i `GET /brewCoffee`, który zwraca HTTP **418 I'm a teapot** |
-| [`franciszek-pora-2`](../../tree/franciszek-pora-2) | 2 — baza danych | PostgreSQL + **Prisma**: diagram ERD (`diagram_ERD.png` z opisem), schemat z wycieczkami, wydatkami (PLN/EUR/USD) i uczestnikami, migracja i skrypt seedujący |
-| [`franciszek-pora-3`](../../tree/franciszek-pora-3) | 3 — REST API | Moduły CRUD dla **wycieczek**, **wydatków** i **uczestników** (kontrolery, serwisy, DTO) |
-| [`franciszek-pora-4`](../../tree/franciszek-pora-4) | 4 — uwierzytelnianie | Model `User`, `POST /auth/register` i `POST /auth/login` z hashowaniem haseł **bcrypt** i tokenami **JWT** (Passport) oraz guard JWT na endpointach wycieczek, wydatków, uczestników i użytkowników |
+| | Gałąź | Co zrobiłem |
+|---|---|---|
+| 0️⃣ | [`franciszek-pora-0`](../../tree/franciszek-pora-0) | Rozgrzewka w TypeScripcie i Node.js |
+| 1️⃣ | [`franciszek-pora-1`](../../tree/franciszek-pora-1) | Pierwsza aplikacja w NestJS — m.in. endpoint `/brewCoffee` zwracający **418 I'm a teapot** ☕🫖 |
+| 2️⃣ | [`franciszek-pora-2`](../../tree/franciszek-pora-2) | Projekt bazy (**diagram ERD**), schemat w **Prisma**: wycieczki, wydatki w PLN/EUR/USD, uczestnicy; migracja i seed |
+| 3️⃣ | [`franciszek-pora-3`](../../tree/franciszek-pora-3) | **CRUD** dla wycieczek, wydatków i uczestników (kontrolery, serwisy, DTO) |
+| 4️⃣ | [`franciszek-pora-4`](../../tree/franciszek-pora-4) | 🔐 **Rejestracja i logowanie** — hasła w **bcrypt**, tokeny **JWT** (Passport) i guard chroniący endpointy |
 
-Technologie: **NestJS**, **TypeScript**, **Prisma**, **PostgreSQL**.
-
-## Uruchomienie zadania
+## 🚀 Uruchomienie
 
 ```bash
 git checkout franciszek-pora-4
 npm install
-npx prisma migrate dev     # wymaga bazy PostgreSQL skonfigurowanej w .env
+npx prisma migrate dev     # potrzebna baza PostgreSQL w .env
 npm run start:dev
 ```

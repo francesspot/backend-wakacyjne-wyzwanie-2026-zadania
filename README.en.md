@@ -1,32 +1,28 @@
-[Polski](README.md) | **English**
+🇵🇱 [Polski](README.md) | 🇬🇧 **English**
 
-# Backend Track Tasks — Summer Challenge 2026
+# ⚙️ NestJS Backend — Summer Challenge 2026
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7c32ec09-c2ac-4961-82e6-a98f04220510"/>
-</p>
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 
-This repository is where we complete the tasks from the backend course of the **Solvro** student research group's Summer Challenge (*Wakacyjne Wyzwanie*). The course materials are in [backend-wakacyjne-wyzwanie-2026](https://github.com/Solvro/backend-wakacyjne-wyzwanie-2026).
+> 🎓 Backend track of the **Summer Challenge 2026** (*Wakacyjne Wyzwanie*) run by the **KN Solvro** student research group (Wrocław University of Science and Technology)
 
-## My solutions
+Over the summer I built, step by step, a REST API for **planning trips and splitting expenses** ✈️💰 — from the first endpoint to JWT login. Each task lives on its own branch.
 
-Each task is on its own branch; the `main` branch contains only this description.
+## 🪜 Steps
 
-| Branch | Task | What was done |
-|--------|------|---------------|
-| [`franciszek-pora-0`](../../tree/franciszek-pora-0) | 0 — TypeScript warm-up | A Node.js script that writes "Elo żelo" to a file as many times as the current minute |
-| [`franciszek-pora-1`](../../tree/franciszek-pora-1) | 1 — First NestJS app | Project setup, a sample endpoint and `GET /brewCoffee`, which returns HTTP **418 I'm a teapot** |
-| [`franciszek-pora-2`](../../tree/franciszek-pora-2) | 2 — Database | PostgreSQL + **Prisma**: an ERD diagram (`diagram_ERD.png` with a description), a schema with trips, expenses (PLN/EUR/USD) and participants, a migration and a seed script |
-| [`franciszek-pora-3`](../../tree/franciszek-pora-3) | 3 — REST API | CRUD modules for **trips**, **expenses** and **participants** (controllers, services, DTOs) |
-| [`franciszek-pora-4`](../../tree/franciszek-pora-4) | 4 — Authentication | A `User` model, `POST /auth/register` and `POST /auth/login` with **bcrypt** password hashing and **JWT** (Passport), plus a JWT guard on the trip, expense, participant and user endpoints |
+| | Branch | What I did |
+|---|---|---|
+| 0️⃣ | [`franciszek-pora-0`](../../tree/franciszek-pora-0) | TypeScript and Node.js warm-up |
+| 1️⃣ | [`franciszek-pora-1`](../../tree/franciszek-pora-1) | First NestJS app — including a `/brewCoffee` endpoint that returns **418 I'm a teapot** ☕🫖 |
+| 2️⃣ | [`franciszek-pora-2`](../../tree/franciszek-pora-2) | Database design (**ERD diagram**), **Prisma** schema: trips, expenses in PLN/EUR/USD, participants; migration and seed |
+| 3️⃣ | [`franciszek-pora-3`](../../tree/franciszek-pora-3) | **CRUD** for trips, expenses and participants (controllers, services, DTOs) |
+| 4️⃣ | [`franciszek-pora-4`](../../tree/franciszek-pora-4) | 🔐 **Sign-up and login** — passwords hashed with **bcrypt**, **JWT** tokens (Passport) and a guard protecting the endpoints |
 
-Tech stack: **NestJS**, **TypeScript**, **Prisma**, **PostgreSQL**.
-
-## Running a task
+## 🚀 Run it
 
 ```bash
 git checkout franciszek-pora-4
 npm install
-npx prisma migrate dev     # requires a PostgreSQL database configured in .env
+npx prisma migrate dev     # needs a PostgreSQL database in .env
 npm run start:dev
 ```
